@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">Beshilotube</div>
+      <nav>
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button id="themetoggle">🌙</button>
+      </nav>
+    </header>
+    <!-- Hero section -->
+    <section class="hero">
+      <div class="hero-content">
+        <img src="./images/proile.png" alt="profile images" class="hero-img" />
+        <h1>Hello, I'm <span>Beshilotube</span></h1>
+        <p>Frontend Developer • HTML • CSS • JavaScript • React</p>
+        <a href="#projects" class="btn"> View my Work</a>
+      </div>
+    </section>
+    <!-- About -->
+     <section id="about" class="section"> 
+        <h2>About Me</h2>
+        <p>I build modern, responsive websites using HTML, CSS, and JavaScript. I love creating beautiful UI designs that are both functional and visually appealing.</p>
+     </section>
+
+     <!-- skills/courses -->
+      <section id="skills" class="section">
+        <h2>Skills & Courses</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <img src="./images/html.png" alt=" html">
+                <h3>HTML</h3>
+                <P>Semantic markup for clean, accessible structure.</P>
+            </div>
+             
+             <div class="skill-card">
+                <img src="./images/CSS-Logo.png" alt=" css">
+                <h3>CSS</h3>
+                <P>Modern, responsive, visually appealing layouts.</P>
+            </div>
+             <div class="skill-card">
+                <img src="./images/javaScript.png" alt=" javaScript">
+                <h3>JavaScript</h3>
+                <P>Semantic markup for clean, accessible structure.</P>
+            </div>
+            <div class="skill-card">
+                <img src="./images/react.png" alt=" react">
+                <h3>React</h3>
+                <P>Component-based scalable user interfaces.</P>
+            </div>
+        </div>
+      </section>
+      <!-- projects -->
+       <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="./images/project1.png" alt="project1">
+                <h3>Portfolio Website</h3>
+                <p>Professional personal website built with HTML, CSS, and JS.</p>
+
+            </div>
+            <div class="project-card">
+                <img src="./images/project2.png" alt="project2">
+                <h3>Weather App</h3>
+                <p>API-driven weather application using JavaScript.</p>
+
+            </div>
+        </div>
+       </section>
+     <!-- contact  -->
+      <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <form action="" id="contactform">
+            <input type="text" placeholder="your name" required>
+            <input type="email" placeholder="your email" required>
+            <textarea name="" id="" placeholder="Your message"></textarea>
+            <button class="btn">Send Message</button>
+
+        </form>
+      </section>
+
+<!-- footer -->
+ <footer>
+    <p>© 2025 Beshilotube. All Rights Reserved.</p>
+ </footer>
+<script src="./script.js"></script>
+  </body>
+</html>
