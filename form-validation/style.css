@@ -1,0 +1,178 @@
+/* GLOBAL STYLES */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #0b1d3a, #020617);
+  min-height: 100vh;
+  color: #fff;
+}
+
+/*NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 40px;
+  background: #020617;
+}
+
+.menu {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-btn {
+  background: #2563eb;
+  border: none;
+  padding: 10px 26px;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+}
+
+/* AUTH CARD*/
+.container {
+  width: 420px;
+  background: #020617;
+  margin: 60px auto;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: none;
+}
+
+/*  PASSWORD INPUT WITH TOGGLE ICON */
+.password-box {
+  position: relative;
+}
+
+.password-box input {
+  width: 100%;
+  padding-right: 35px; /* space for icon */
+}
+
+.toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #888;
+  user-select: none;
+}
+
+.toggle:hover {
+  color: #2563eb;
+}
+
+/* PASSWORD RULES*/
+.rules {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.rules li {
+  color: #94a3b8;
+}
+
+.rules li.valid {
+  color: #22c55e;
+  font-weight: bold;
+}
+
+/* STRENGTH BAR*/
+.strength-bar {
+  height: 8px;
+  background: #1e293b;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+#strengthFill {
+  height: 100%;
+  width: 0%;
+  border-radius: 5px;
+  transition: width 0.3s, background 0.3s;
+}
+
+.weak {
+  background: #ef4444;
+}
+.medium {
+  background: #facc15;
+}
+.strong {
+  background: #22c55e;
+}
+
+/*   SUCCESS & ERROR TEXT */
+.success {
+  color: #22c55e;
+}
+.error {
+  color: #ef4444;
+}
+
+/* FORM BUTTONS */
+.form-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 18px;
+  background: #2563eb;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+/* SWITCH LINKS*/
+.switch {
+  text-align: center;
+  margin-top: 14px;
+}
+
+.switch-link {
+  color: #2563eb;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.switch-link:hover {
+  color: #22c55e;
+  text-decoration: underline;
+}
+
+/* FORM VISIBILITY */
+form {
+  display: none;
+}
+form.active {
+  display: block;
+}
+
+/*   DASHBOARD */
+.home {
+  display: none;
+  text-align: center;
+  padding: 60px;
+}

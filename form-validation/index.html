@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Beshilo Coding Academy | Auth System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">BESHILO </div>
+
+  <ul class="menu">
+    <li>Home</li>
+    <li>Coures</li>
+    <li>Contact Us</li>
+    <li>About US </li>
+  </ul>
+
+  <button id="authBtn" class="nav-btn">Sign In</button>
+</nav>
+<h2 style="text-align: center; padding-top: 10px;">Form Validation: Register, Login & Logout Like a Pro!</h2>
+<!-- AUTH CARD -->
+<div class="container" id="authContainer">
+  <h2 id="formTitle">Register</h2>
+
+  <!-- REGISTER FORM -->
+  <form id="registerForm" class="active">
+    <!-- Full Name Input -->
+    <label>Full Name</label>
+    <input type="text" id="regName" required>
+
+    <!-- Email Input -->
+    <label>Email</label>
+    <input type="email" id="regEmail" required>
+
+    <!-- Password Input -->
+    <label>Password</label>
+    <div class="password-box">
+      <input type="password" id="regPassword" required>
+      <span class="toggle" data-target="regPassword">👁️</span>
+    </div>
+
+    <!-- PASSWORD RULES -->
+    <ul class="rules">
+      <li id="r-length">Minimum 8 characters</li>
+      <li id="r-upper">At least 1 uppercase letter</li>
+      <li id="r-lower">At least 1 lowercase letter</li>
+      <li id="r-number">At least 1 number</li>
+      <li id="r-special">At least 1 special character (!@#$%^&*)</li>
+    </ul>
+
+    <!-- PASSWORD STRENGTH BAR -->
+    <div class="strength-bar">
+      <div id="strengthFill"></div>
+    </div>
+    <small id="strengthText"></small>
+
+    <!-- Confirm Password Input -->
+    <label>Confirm Password</label>
+    <div class="password-box">
+      <input type="password" id="regConfirm" required>
+      <span class="toggle" data-target="regConfirm">👁️</span>
+    </div>
+    <small id="matchMsg"></small>
+
+    <!-- Register Button -->
+    <button class="form-btn">Register</button>
+
+    <!-- Switch to Login -->
+    <p class="switch">
+      Already have an account? <span id="toLogin" class="switch-link">Login</span>
+    </p>
+  </form>
+
+  <!-- LOGIN FORM -->
+  <form id="loginForm">
+    <label>Email</label>
+    <input type="email" id="loginEmail" required>
+
+    <label>Password</label>
+    <div class="password-box">
+      <input type="password" id="loginPassword" required>
+      <span class="toggle" data-target="loginPassword">👁️</span>
+    </div>
+
+    <small class="error" id="loginMsg"></small>
+
+    <!-- Login Button -->
+    <button class="form-btn">Login</button>
+
+    <!-- Switch to Register -->
+    <p class="switch">
+      Don’t have an account? <span id="toRegister" class="switch-link">Register</span>
+    </p>
+  </form>
+</div>
+
+<!-- DASHBOARD / HOME PAGE -->
+<div class="home" id="home">
+  <h1>Welcome, <span id="username"></span>!</h1>
+  <p>This is a demo dashboard for logged-in users.</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
