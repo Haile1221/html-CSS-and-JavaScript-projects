@@ -1,0 +1,336 @@
+/* ========== EXISTING COMMENTS KEPT ========== */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+/* CSS Variable */
+/* store reusable codes (colors, sizes, timing, etc) */
+
+:root {
+  --bg: #f8fafc;
+  --card: rgba(255, 255, 255, 0.85);
+  --text: #0f172a;
+  --muted: #475569;
+  --radius: 20px;
+  --primary: #6366f1;
+  --transition: 0.3s ease;
+}
+.dark {
+  --bg: #020617;
+  --card: rgba(15, 23, 42, 0.85);
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+}
+
+/* general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Header */
+header.header {
+  position: static;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  z-index: 1000;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.05);
+  background: var(--bg);
+}
+header .logo {
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+header nav a {
+  margin: 0 0.8rem;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text);
+}
+header nav a:hover {
+  color: var(--primary);
+}
+#themetoggle {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.nav-btn {
+  background: none;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text);
+  margin-left: 0.8rem;
+}
+.nav-btn:hover {
+  color: var(--primary);
+}
+.hidden {
+  display: none !important;
+}
+
+/* AUTH UI */
+.auth-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+.auth-card {
+  background: var(--card);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 420px;
+  border-radius: var(--radius);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+}
+.auth-form {
+  display: none;
+}
+.auth-form.active {
+  display: block;
+}
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
+.auth-sub {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+.input-group,
+.password-group {
+  position: relative;
+}
+.password-group input {
+  width: 100%;
+  padding: 0.9rem 3rem 0.9rem 0.9rem;
+  border-radius: 14px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
+.pass-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--muted);
+  padding: 0;
+}
+.pass-toggle:hover {
+  color: var(--primary);
+}
+.btn.full {
+  width: 100%;
+}
+.auth-link {
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+.auth-link span {
+  color: var(--primary);
+  cursor: pointer;
+  font-weight: 600;
+}
+.auth-msg {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.auth-msg.success {
+  color: green;
+}
+.auth-msg.error {
+  color: red;
+}
+
+/* Hide projects when logged out */
+.projects-grid.hidden {
+  display: none;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 6rem 2rem;
+}
+.hero-content {
+  max-width: 800px;
+}
+.hero-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  object-fit: cover;
+  border: 3px solid var(--primary);
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.hero h1 span {
+  columns: var(--primary);
+}
+.hero p {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+.hero .btn {
+  padding: 0.8rem 2rem;
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  background: var(--primary);
+  transition: transform var(--transition);
+}
+.hero .btn:hover {
+  transform: translate(-3px);
+}
+
+/* Section */
+.section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 4rem 2rem;
+}
+.section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.skill-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  transition: transform var(--transition);
+  backdrop-filter: blur(1200px);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+.skill-card:hover {
+  transform: translateY(-8px);
+}
+.skill-card img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+  object-fit: contain;
+}
+.skill-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+}
+.skill-card p {
+  margin: 0 1rem 1rem 1rem;
+  font-size: 0.95rem;
+}
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.project-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  transition: transform var(--transition);
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+.project-card:hover {
+  transform: translateY(-8px);
+}
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.project-card h3 {
+  margin: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.project-card p {
+  margin: 0 1rem 1rem 1rem;
+  font-size: 0.95rem;
+}
+
+/* Contact */
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+form input,
+form textarea {
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+}
+form button {
+  background: var(--primary);
+  transition: transform var(--transition);
+  padding: 0.8rem 2rem;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+form button:hover {
+  transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+  font-size: var(--muted);
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .section h2 {
+    font-size: 1.8rem;
+  }
+}
